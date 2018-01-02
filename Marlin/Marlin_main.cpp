@@ -12176,6 +12176,11 @@ void process_parsed_command() {
       case 303: // M303: PID autotune
         gcode_M303();
         break;
+//h//begin
+        case 290:  // M300: Axel Testmove
+          do_blocking_move_to(11.0,22.0,33.0,10.0);
+          break;
+//h//end
 
       #if ENABLED(MORGAN_SCARA)
         case 360:  // M360: SCARA Theta pos1

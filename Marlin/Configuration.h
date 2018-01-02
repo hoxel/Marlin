@@ -492,13 +492,22 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+// Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
+//h//#define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//h//#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+// Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
+#define X_MIN_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the endstop.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true //h//+ set to true to invert the logic of the probe.
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -621,6 +630,7 @@
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
 //#define PROBE_MANUALLY
+#define PROBE_MANUALLY//h//
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -789,7 +799,8 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+//h//#define Z_MAX_POS 200
+#define Z_MAX_POS 85//h//
 
 /**
  * Software Endstops
@@ -881,6 +892,7 @@
  * NOTE: Requires a lot of PROGMEM!
  */
 //#define DEBUG_LEVELING_FEATURE
+#define DEBUG_LEVELING_FEATURE//h//
 
 #if ENABLED(MESH_BED_LEVELING) || ENABLED(AUTO_BED_LEVELING_BILINEAR) || ENABLED(AUTO_BED_LEVELING_UBL)
   // Gradually reduce leveling correction until a set height is reached,
@@ -1330,6 +1342,7 @@
  *
  */
 //#define SDSUPPORT
+#define SDSUPPORT//h//
 
 /**
  * SD CARD: SPI SPEED
@@ -1401,6 +1414,7 @@
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
 //#define SPEAKER
+#define SPEAKER//h//
 
 //
 // The duration and frequency for the UI feedback sound.
@@ -1411,6 +1425,8 @@
 //
 //#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 100
 //#define LCD_FEEDBACK_FREQUENCY_HZ 1000
+#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 0//h//
+#define LCD_FEEDBACK_FREQUENCY_HZ 0//h//
 
 //
 // CONTROLLER TYPE: Standard
@@ -1482,6 +1498,7 @@
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
 //#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER//h//
 
 //
 // MakerLab Mini Panel with graphic

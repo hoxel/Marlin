@@ -34,6 +34,7 @@
 #include "MarlinConfig.h"
 
 //#define DEBUG_GCODE_PARSER
+#define DEBUG_GCODE_PARSER//h//
 
 #if ENABLED(DEBUG_GCODE_PARSER)
   #if ENABLED(AUTO_BED_LEVELING_UBL)
